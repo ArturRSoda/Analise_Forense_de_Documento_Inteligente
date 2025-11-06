@@ -1,0 +1,17 @@
+services:
+  # 'app' é o nome do nosso serviço (pode ser qualquer nome)
+  app:
+    # 'build: .' diz ao compose para construir a imagem usando o Dockerfile
+    # que está nesta mesma pasta ('.')
+    build: .
+    
+    # 'ports' mapeia a porta 8501 de DENTRO do container para a porta 8501
+    # da máquina do usuário (host).
+    ports:
+      - "8501:8501"
+      
+    # 'environment' é a solução para sua API KEY.
+    # Isso injeta a variável de ambiente GOOGLE_API_KEY no container.
+    # O valor ${GOOGLE_API_KEY} será lido de um arquivo .env
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}

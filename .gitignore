@@ -1,0 +1,32 @@
+# Arquivos de cache e compilados do Python
+pycache/
+*.py[cod]
+*$py.class
+
+# Distribuição / build
+build/
+dist/
+*.egg-info/
+*.whl
+*.egg
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+.env/
+
+# Arquivos de segredo
+# NUNCA envie seu arquivo .env para o GitHub!
+
+.env
+
+# Arquivos de IDE
+
+.vscode/
+.idea/
+
+# Arquivos de Sistema Operacional
+
+.DS_Store
+Thumbs.db
