@@ -1,8 +1,11 @@
 # Sistema Inteligente de Análise Forense de Documentos
 
 **Autor:** Artur Luiz Rizzato Toru Soda
+
 **Instituição:** Universidade Federal de Santa Catarina (UFSC)
+
 **Disciplina:** INE5448 — Inteligência Artificial e Segurança
+
 **Orientação:** Wellington Fernandes Silvano
 
 ---
