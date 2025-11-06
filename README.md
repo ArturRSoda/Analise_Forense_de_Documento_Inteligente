@@ -97,7 +97,7 @@ Abra seu navegador e acesse:
 ├── docker-compose.yml   # Orquestra o build e a injeção da API key
 ├── main.py              # O código principal da aplicação Streamlit
 ├── requirements.txt     # Dependências Python
-├── best.pt              # (Local) Modelo YOLOv8 para detecção de PII
+├── best.pt              # Modelo YOLOv8 para detecção de PII
 ├── .env                 # (Local) Onde você coloca sua API key (ignorado pelo Git)
 ├── .gitignore           # Ignora arquivos do Git (como .env e .pt)
 ├── .dockerignore        # Ignora arquivos do build do Docker
