@@ -1,20 +1,18 @@
 # Sistema Inteligente de Análise Forense de Documentos
 
-**Autor:** Artur Luiz Rizzato Toru Soda
-
-**Instituição:** Universidade Federal de Santa Catarina (UFSC)
-
-**Disciplina:** INE5448 — Inteligência Artificial e Segurança
-
-**Orientação:** Wellington Fernandes Silvano
+- **Autor:** Artur Luiz Rizzato Toru Soda
+- **Instituição:** Universidade Federal de Santa Catarina (UFSC)
+- **Disciplina:** INE5448 — Inteligência Artificial e Segurança
+- **Orientação:** Wellington Fernandes Silvano
 
 ---
 
 Este projeto é uma aplicação web construída com Streamlit que implementa um sistema de análise forense de documentos com uma arquitetura híbrida, focada em segurança e privacidade.
 
+
 A análise é dividida em duas etapas:
-1. IA Local (Proteção de PII): Um modelo YOLOv8 (best.pt) é executado localmente na máquina do usuário para detectar e redigir (censurar) Informações de Identificação Pessoal (PII) da imagem do documento.
-2. IA em Nuvem (Análise Forense): Somente a imagem "segura" (redigida) e metadados não-sensíveis são enviados para a API do Google Gemini. A IA em nuvem então realiza uma análise forense detalhada para detectar sinais de fraude, adulteração, inconsistências de compressão, etc.
+1. **IA Local (Proteção de PII):** Um modelo ```YOLOv8``` (best.pt) é executado localmente na máquina do usuário para detectar e redigir (censurar) Informações de Identificação Pessoal (PII) da imagem do documento.
+2. **IA em Nuvem (Análise Forense):** Somente a imagem "segura" (redigida) e metadados não-sensíveis são enviados para a ```API do Google Gemini```. A IA em nuvem então realiza uma análise forense detalhada para detectar sinais de fraude, adulteração, inconsistências de compressão, etc.
 
 ---
 
@@ -56,6 +54,7 @@ cd Analise_Forense_de_Documento_Inteligente
 ```
 
 
+
 ### Passo 2: Configure sua Chave de API
 
 O aplicativo precisa de uma chave da API do Google Gemini para funcionar.
@@ -69,6 +68,7 @@ GOOGLE_API_KEY=SUA_CHAVE_API_VEM_AQUI
 O arquivo .gitignore já está configurado para nunca enviar seu arquivo .env para o GitHub.
 
 
+
 ### Passo 3: Construa e Execute o Container
 
 Abra um terminal na raiz do projeto e execute o seguinte comando:
@@ -79,6 +79,7 @@ docker-compose up --build
 - ```--build```: Força o Docker a construir a imagem do zero (só é realmente necessário na primeira vez ou se você mudar o Dockerfile).
 - O Docker irá ler seu ```Dockerfile```, instalar o Python, Tesseract, OpenCV e todas as dependências do requirements.txt em um ambiente isolado.
 - O ```docker-compose``` irá ler seu ```.env``` e injetar a ```GOOGLE_API_KEY``` com segurança no container.
+
 
 
 ### Passo 4: Acesse a Aplicação
